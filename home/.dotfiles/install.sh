@@ -6,7 +6,7 @@ files=$( find -maxdepth 1 -type f ! -iname "install.sh" | xargs -I {} basename {
 
 for file in $files; do
   f="${HOME}/.${file}"                # ~/.bashrc
-  if [ -e $f]; then
+  if [ -e $f ]; then
     mv -v "${f}" "${f}".old              # backup old files
   fi
   ln -sv "${PWD}/${file}" "${f}"
