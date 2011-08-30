@@ -6,7 +6,7 @@ Just a place to keep my dotfiles synced.
 
 * bashrc
 * bash aliases
-* inputrc (todo)
+* inputrc
 * gitignore
 
 ## Copyright ##
