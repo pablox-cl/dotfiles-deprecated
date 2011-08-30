@@ -1,0 +1,12 @@
+# vim stuff
+*.swp
+*~
+.#*
+
+# osx stuff
+.DS_Store
+
+._*
+/.bundle
+TAGS
+tags
