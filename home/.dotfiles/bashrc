@@ -1,7 +1,28 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+DOTFILES="${HOME}/.dotfiles"
+BASHRCD="${DOTFILES}/bashrc.d"
+BASHRC="${HOME}/.bashrc"
 
-files=$(ls ~/.dotfiles/bashrc.d/private/*.sh ~/.dotfiles/bashrc.d/*.sh 2>/dev/null)
-    for file in ${files}; do
-        source ${file}
-    done
+# The directories you would like to parse
+DIRS=( "private" "completions" "aliases" )
+
+function dot_get_files() {
+  # $1: directory: ~/.dotfiles/bashrc.d/
+  # $2: depth: 4 levels
+  if [ -d "${BASHRCD}/$1" ]; then
+    find ${BASHRCD}/$1 -maxdepth ${2:-4} -type f | grep -v "~$" | sort
+  fi
+}
+
+# Source every file on the bashrc.d directory
+for f in $( dot_get_files . 1 ); do
+  source $f
+done
+
+# Source every other file that is on the directories belonging to the array
+for directory in ${DIRS[@]}; do
+  for f in $( dot_get_files ${directory} ); do
+    source $f
+  done
+done
