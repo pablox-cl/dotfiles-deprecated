@@ -11,14 +11,13 @@ alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'                    # detailed list...
 alias la='ll -A'                    # ... and hidden files
 alias lx='ll -BX'                   # sort by extension
-alias lz='ll -rS'                   # sort by size
-alias lt='ll -rt'                   # sort by date
+alias lz='ll -S'                    # sort by size
+alias lt='ll -t'                    # sort by date
 alias lm='la | more'
 alias lg='ls -G'                    # compact view
 
 # lazy guy
 alias _='sudo'
-alias c='clear'
 alias cls='clear'                   # dos ftw
 alias q='exit'
 alias rb='ruby'
@@ -34,6 +33,8 @@ alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias nano='nano -w'
 alias ping='ping -c 5'
+alias du1='du --max-depth=1'
+alias da='date "+%A, %B %d, %Y [%T]"'
 alias ..='cd ..'                    # go up one directory...
 alias ...='cd ../..'                # two...
 alias ....='cd ../../..'            # three...
@@ -63,9 +64,6 @@ if [ $UID -ne 0 ]; then
 fi
 
 # new commands
-alias da='date "+%A, %B %d, %Y [%T]"'
-alias du1='du --max-depth=1'
 alias h='history | grep $1'           # requires an argument
 alias openports='netstat --all --numeric --programs --inet'
 alias pg='ps -Af | grep $1'           # requires an argument (note: /usr/bin/pg is installed by the util-linux package; maybe a different alias name should be used)
-
