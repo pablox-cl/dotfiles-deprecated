@@ -1,4 +1,4 @@
-# 003-aliases.sh
+# 000-main.sh
 
 # Thanks ArchWiki: https://wiki.archlinux.org/index.php/Core_Utilities
 # and Revans from Bash-it: https://github.com/revans/bash-it
