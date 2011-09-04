@@ -6,6 +6,9 @@ PROMPT_DIRTRIM=3
 
 PS1="${BWhite}[${BPurple}${History}${BWhite}:${BBlue}\w${BWhite}]${BGreen} ${User}${Color_Off} "
 
+# Add rvm to your prompt
+#PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
+
 # A fancy alternative
 # Thanks technical pickles: https://github.com/technicalpickles/dotpickles
 # Note that I changed the variable names to coincide with the ones I provide
