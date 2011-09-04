@@ -10,3 +10,6 @@
 /.bundle
 TAGS
 tags
+
+# redcar
+.redcar/*
