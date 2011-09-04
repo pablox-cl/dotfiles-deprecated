@@ -10,6 +10,7 @@ Just a place to keep my dotfiles synced.
 * gitignore
 * rvmrc
 * screenrc
+* ackrc
 
 ## Note ##
 
