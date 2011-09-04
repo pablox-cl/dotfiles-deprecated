@@ -8,6 +8,8 @@ Just a place to keep my dotfiles synced.
 * bash aliases
 * inputrc
 * gitignore
+* rvmrc
+* screenrc
 
 ## Note ##
 
