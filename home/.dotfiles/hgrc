@@ -1,0 +1,6 @@
+[ui]
+username = username <email@domain.org>
+merge = meld
+
+[extensions]
+hgext.graphlog =

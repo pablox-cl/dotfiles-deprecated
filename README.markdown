@@ -11,6 +11,7 @@ Just a place to keep my dotfiles synced.
 * rvmrc
 * screenrc
 * ackrc
+* hgrc
 
 ## Note ##
 
