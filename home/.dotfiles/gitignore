@@ -13,3 +13,7 @@ tags
 
 # redcar
 .redcar/*
+
+# compilated files
+*.pyc
+*.rbc
