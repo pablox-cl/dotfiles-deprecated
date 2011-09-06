@@ -24,8 +24,14 @@ alias rb='ruby'
 alias md='mkdir -p'
 alias rd='rmdir'
 
+# push and pop directories on directory stack
+alias pu='pushd'
+alias po='popd'
+
 # modified commands
-alias diff='colordiff'              # requires colordiff package
+if [ ! - x "$(which colordiff)" ]; then
+  alias diff='colordiff'              # requires colordiff package
+fi
 alias grep='grep -i --color=auto'
 alias more='less'
 alias df='df -h'
@@ -36,9 +42,11 @@ alias ping='ping -c 5'
 alias du1='du --max-depth=1'
 alias da='date "+%A, %B %d, %Y [%T]"'
 alias vim='vim -p'
+alias .='pwd'
 alias ..='cd ..'                    # go up one directory...
 alias ...='cd ../..'                # two...
 alias ....='cd ../../..'            # three...
+alias -- -='cd -'                   # go back to the last directory
 
 # security measures (prompt to overwrite)
 #alias rm='rm -i'
