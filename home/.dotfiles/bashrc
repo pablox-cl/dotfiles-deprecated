@@ -11,7 +11,7 @@ function dot_get_files() {
   # $1: directory: ~/.dotfiles/bashrc.d/
   # $2: depth: 4 levels
   if [ -d "${BASHRCD}/$1" ]; then
-    find ${BASHRCD}/$1 -maxdepth ${2:-4} -type f | grep -v "~$" | sort
+    find ${BASHRCD}/$1 -maxdepth ${2:-4} -type f | grep -E "(.bash|.sh)$" | sort
   fi
 }
 
