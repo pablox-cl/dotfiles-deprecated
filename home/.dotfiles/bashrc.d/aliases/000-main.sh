@@ -33,7 +33,6 @@ if [ -x "$(which colordiff)" ]; then
   alias diff='colordiff'              # requires colordiff package
 fi
 alias grep='grep -i --color=auto'
-alias more='less'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
@@ -76,3 +75,73 @@ fi
 alias h='history | grep $1'           # requires an argument
 alias openports='netstat --all --numeric --programs --inet'
 alias pg='ps -Af | grep $1'           # requires an argument (note: /usr/bin/pg is installed by the util-linux package; maybe a different alias name should be used)
+
+function alias-help() {
+cat << EOF
+
+    ## Aliases included in this bundle
+
+    # List aliases
+    ls = ls -hF --color=always
+    lr = ls -R                      # recursive
+    ll = ls -l                      # detailed list...
+    la = ll -A                      # ... and hidden files
+    lx = ll -BX                     # sort by extension
+    lz = ll -S                      # sort by size
+    lt = ll -t                      # sort by date
+    lm = la | more
+    lg = ls -G'                     # compact view
+
+    # I'm a little lazy
+    _   = sudo
+    cls = clear                     # dos ftw
+    q   = exit
+    rb  = ruby
+    md  = mkdir -p
+    rd  = rmdir
+    pu  = pushd
+    po  = popd
+
+    # Modified commands
+    diff  = colordiff               # only works if colordiff is installed
+    grep  = grep -i --color=auto
+    df    = df -h
+    du    = du -c -h                # disk usage for humans
+    mkdir = mkdir -p -v
+    nano  = nano -w                 # disable wrapping of long lines
+    ping  = ping -c 5
+    du1   = du --max-depth=1        # disk usage, just the working dir
+    da    = date "+%A, %B %d, %Y [%T]
+    vim   = vim -p
+    .     = pwd
+    ..    = cd ..                   # go up one directory...
+    ...   = cd ../..                # two...
+    ....  = cd ../../..             # three...
+    -     = cd -                    # go back to the last directory
+
+    # Security measures (disabled by default)
+    rm = rm -i
+    cp = cp -i
+    mv = mv -i
+    ln = ln -i
+
+    chown = chown --preserve-root
+    chmod = chmod --preserve-root
+    chgrp = chgrp --preserve-root
+
+    # Some stuff that has to be run as root
+    scat   = sudo cat
+    svim   = sudo vim
+    root   = sudo su
+    reboot = sudo reboot
+    halt   = sudo halt
+    update = sudo pacman -Su
+    netcfg = sudo netcfg2
+
+    # Some new commands
+    h         = history | grep $1   # requires an argument
+    openports = netstat --all --numeric --programs --inet
+    pg        = ps -Af | grep $1    # requires an argument (note: /usr/bin/pg is installed by the util-linux)
+
+EOF
+}
