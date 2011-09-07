@@ -3,6 +3,11 @@
 # Thanks ArchWiki: https://wiki.archlinux.org/index.php/Core_Utilities
 # and Revans from Bash-it: https://github.com/revans/bash-it
 
+# changing directory to the project dir
+function c {
+    cd ${PROJECT_DIR}/$1;
+}
+
 # ls
 eval $(dircolors -b)
 alias sl='ls'                       # errare humanum est
