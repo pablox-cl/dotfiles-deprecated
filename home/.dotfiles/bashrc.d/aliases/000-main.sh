@@ -29,7 +29,7 @@ alias pu='pushd'
 alias po='popd'
 
 # modified commands
-if [ ! -x "$(which colordiff)" ]; then
+if [ -x "$(which colordiff)" ]; then
   alias diff='colordiff'              # requires colordiff package
 fi
 alias grep='grep -i --color=auto'
