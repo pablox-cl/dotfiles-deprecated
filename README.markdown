@@ -14,6 +14,12 @@ Just a place to keep my dotfiles synced.
 * hgrc
 * conkyrc
 
+## Completion scripts ##
+
+* git
+* rake
+* projects (see below)
+
 ## Install ##
 
 There are two ways to install the dotfiles (though they are basically the same
@@ -49,6 +55,18 @@ Symlink it to your home directory
 Run the install script
     ~/.dotfiles/install.sh
 
+## Project completion ##
+
+I normally keep my projects under a specific dir (`~/code`). Thanks
+to [Ryan Bates Dotfiles](https://github.com/ryanb/dotfiles) it's
+possible to auto-complete your projects writing `c <Tab><Tab>`. If
+you use another directory (I guess you are) just change the `PROJECT_DIR`
+variable on `bashrc.d/000-env.sh`.
+
+The shortcut (`c` by default; which is actually a function) is defined
+in two places, on the `bashrc.d/aliases/000-main.sh` and
+`bashrc.d/completions/000-completions.sh`.
+
 ## Conky Notes ##
 
 Conky works like voodoo so IMHO is really hard to share a "beautiful"
@@ -61,9 +79,10 @@ script.
 
 ## Issues? ##
 
-If you have any problem or think that something can work better, don't
-hesitate in contacting me through my e-mail pablo (at) glatelier (dot)
-org, via github message or filing an issue in the github tracker.
+If you have any problem, think that something can work better or want to
+give some feedback, please don't hesitate in contacting me through my
+e-mail pablo (at) glatelier (dot) org, via github message or filing an
+issue in the github tracker.
 
 ## Copyright ##
 
