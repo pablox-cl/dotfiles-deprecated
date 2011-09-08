@@ -1,4 +1,9 @@
 #!/bin/bash
 # 000-completions.sh
 
-complete -C ${BASHRCD}/completions/project.completion.rb -o default c
+function complete_script() {
+    complete -C ${BASHRCD}/completions/$1.completion.rb -o default $2
+}
+
+complete_script project c
+complete_script rake rake
