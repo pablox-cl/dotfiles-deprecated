@@ -5,7 +5,6 @@ Just a place to keep my dotfiles synced.
 ## Files included ##
 
 * bashrc
-* bash aliases
 * inputrc
 * gitignore
 * rvmrc
@@ -13,6 +12,12 @@ Just a place to keep my dotfiles synced.
 * ackrc
 * hgrc
 * conkyrc
+
+## Aliases ##
+
+* general bash aliases
+* git
+* rails
 
 ## Completion scripts ##
 

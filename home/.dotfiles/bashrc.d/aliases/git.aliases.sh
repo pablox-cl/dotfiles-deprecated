@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# git-aliases.sh
+# git.aliases.sh
 #
 # From Bash-it
 # https://github.com/revans/bash-it
