@@ -1,3 +1,13 @@
+# Private...
 home/.dotfiles/bashrc.d/private/*
+
+# These are going to be personal files
 home/.dotfiles/bashrc.before
 home/.dotfiles/bashrc.after
+
+# Temp files, no point in tracking them
+home/.dotfiles/tmp
+
+# Bash it files, since they're updated through git, no point
+# in keeping track of them
+home/.dotfiles/lib/bash-it/*

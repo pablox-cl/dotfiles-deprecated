@@ -1,0 +1,16 @@
+require 'rake/clean'
+CLEAN.include('tmp')
+
+tmp_dir = File.expand_path("tmp")
+cwd = File.expand_path("../", __FILE__)
+
+task :default => [:bash_it_theme_support, :clean]
+
+desc "Bash it theme support"
+task :bash_it_theme_support do
+  puts "*" * 40
+  puts "*#{"Cloning Bash-it themes".center(38)}*"
+  puts "*" * 40 
+  sh "git clone git://github.com/revans/bash-it.git #{tmp_dir}/bash-it"
+  FileUtils.mv "#{tmp_dir}/bash-it/themes", "#{cwd}/lib/bash-it"
+end

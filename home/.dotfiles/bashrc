@@ -3,6 +3,7 @@
 DOTFILES="${HOME}/.dotfiles"
 BASHRCD="${DOTFILES}/bashrc.d"
 BASHRC="${HOME}/.bashrc"
+#BASH_IT_THEME_SUPPORT="yes"
 
 # The directories you would like to parse
 DIRS=( "private" "completions" "aliases" )
@@ -36,6 +37,11 @@ for directory in ${DIRS[@]}; do
     source $f
   done
 done
+
+# Use bash-it themes if support is enabled
+if [[ $BASH_IT_THEME_SUPPORT ]]; then
+  source bash-it-theme-support.bash
+fi
 
 # Load a bashrc after everything
 bashrc_local after
