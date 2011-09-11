@@ -38,26 +38,33 @@ ironic isn't it?).
 ### Clone the repo ###
 
 Clone the dotfiles
-    git clone git://github.com/PaBLoX-CL/dotfiles.git
 
+    git clone git://github.com/PaBLoX-CL/dotfiles.git
+    
 Move the dotfiles to an appropriate place
+
     mv dotfiles/home/.dotfiles ~
 
 Run the install script
+
     ~/.dotfiles/install.sh
 
 ### Through homesick ###
 
 Install homesick
+
     gem install homesick
 
-Clone the castle (which is nothing more than a lot of dotfiles)
+Clone the castle (which is nothing more than a lot of dotfiles
+
     homesick clone PaBLoX-CL/dotfiles
 
 Symlink it to your home directory
+
     homesick symlink PaBLoX-CL/dotfiles
 
 Run the install script
+
     ~/.dotfiles/install.sh
 
 ## Project completion ##
