@@ -79,6 +79,31 @@ The shortcut (`c` by default; which is actually a function) is defined
 in two places, on the `bashrc.d/aliases/000-main.sh` and
 `bashrc.d/completions/000-completions.sh`.
 
+## Bash-it theme support ##
+
+I included support for [bash-it](https://github.com/revans/bash-it)
+themes which is **not activated by default**.
+
+To use it first use the rake task to clone the latest themes:
+
+    rake bash_it_theme_support
+
+Then, source the bash-it support file (loads bash-it default - bobby):
+
+    source ~/.dotfiles/bash-it-theme-support.bash
+
+To try a different theme you have to source the corresponding file
+keeping the template `~/.dotfiles/lib/bash-it/themes/theme-name/theme-name.theme.bash`,
+for example:
+
+    source ~/.dotfiles/lib/bash-it/themes/zork/zork.theme.bash
+
+If you want to keep the configuration as default, uncomment the line `BASH_IT_THEME_SUPPORT="yes"`
+at the beginning of the `bashrc` file. Note that `bashrc` actually doesn't
+care about that variable value is, only if that variable is initialized.
+Could it have been `BASH_IT_THEME_SUPPORT="no way"` and still the bash-it
+support would have been loaded.
+
 ## Conky Notes ##
 
 Conky works like voodoo so IMHO is really hard to share a "beautiful"
