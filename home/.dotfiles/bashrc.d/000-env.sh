@@ -18,6 +18,7 @@ HISTCONTROL=ignoreboth:erasedups
 
 # Better completion with man & sudo
 complete -cf sudo
+complete -cf _
 complete -cf man
 
 # Append to the history file, don't overwrite it
