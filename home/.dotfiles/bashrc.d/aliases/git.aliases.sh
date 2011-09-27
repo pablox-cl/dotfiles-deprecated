@@ -65,6 +65,7 @@ Git Custom Aliases Usage
     gdv = git diff -w \"$@\" | vim -R -
     gc = git commit -v
     gca = git commit -v -a
+    gcam = git commit -a -m
     gci = git commit --interactive
     gb = git branch
     gba = git branch -a
