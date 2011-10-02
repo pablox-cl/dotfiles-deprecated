@@ -27,7 +27,7 @@ alias cls='clear'                   # dos ftw
 alias q='exit'
 alias rb='ruby'
 alias md='mkdir -p'
-alias rd='rmdir'
+alias rdir='rmdir'
 
 # push and pop directories on directory stack
 alias pu='pushd'
@@ -98,14 +98,14 @@ cat << EOF
     lg = ls -G'                     # compact view
 
     # I'm a little lazy
-    _   = sudo
-    cls = clear                     # dos ftw
-    q   = exit
-    rb  = ruby
-    md  = mkdir -p
-    rd  = rmdir
-    pu  = pushd
-    po  = popd
+    _     = sudo
+    cls   = clear                     # dos ftw
+    q     = exit
+    rb    = ruby
+    md    = mkdir -p
+    rdir  = rmdir
+    pu    = pushd
+    po    = popd
 
     # Modified commands
     diff  = colordiff               # only works if colordiff is installed
