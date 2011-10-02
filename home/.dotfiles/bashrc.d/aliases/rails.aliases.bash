@@ -11,7 +11,7 @@ alias rg='rails g'
 alias rs='rails s'
 alias rc='rails c'
 alias rn='rails new'
-alias rd='rails dbconsole'
+alias rdb='rails dbconsole'
 alias rp='rails plugin'
 alias ra='rails application'
 alias rd='rails destroy'
@@ -35,7 +35,7 @@ cat << EOF
     ts          = thin server
     rc/sc       = rails console
     rn          = rails new
-    rd          = rails dbconsole
+    rdb         = rails dbconsole
     rp          = rails plugin
     ra          = rails application
     rd          = rails destroy
