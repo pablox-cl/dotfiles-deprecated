@@ -12,6 +12,7 @@ Just a place to keep my dotfiles synced.
 * ackrc
 * hgrc
 * conkyrc
+* detoxrc
 
 ## Aliases ##
 
