@@ -1,0 +1,3 @@
+[submodule "home/.dotfiles/lib/git-utils"]
+	path = home/.dotfiles/lib/git-utils
+	url = https://github.com/ddollar/git-utils.git

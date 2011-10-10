@@ -1,5 +1,6 @@
 require 'rake/clean'
 CLEAN.include('tmp')
+directory "bin"
 
 tmp_dir = File.expand_path("tmp")
 cwd = File.expand_path("../", __FILE__)
@@ -10,7 +11,31 @@ desc "Bash it theme support"
 task :bash_it_theme_support do
   puts "*" * 40
   puts "*#{"Cloning Bash-it themes".center(38)}*"
-  puts "*" * 40 
+  puts "*" * 40
   sh "git clone git://github.com/revans/bash-it.git #{tmp_dir}/bash-it"
   FileUtils.mv "#{tmp_dir}/bash-it/themes", "#{cwd}/lib/bash-it"
+end
+
+desc "Install git-utils"
+task :install_git_utils => "bin" do
+  puts "*" * 40
+  puts "*#{"Updating git-utils to last version".center(38)}*"
+  puts "*" * 40
+  Dir.chdir "../../"
+  sh "git submodule init"
+  sh "git submodule update home/.dotfiles/lib/git-utils"
+  Dir.chdir "#{cwd}"
+  FileUtils.cp_r Dir.glob("lib/git-utils/git-*"), "bin", preserve: true
+end
+
+desc "Enable scripts"
+task :enable_scripts do
+  puts "*" * 55
+  puts "*#{"Linking scripts to your #{Dir.home}/bin directory".center(53)}*"
+  puts "*" * 55
+  FileUtils.ln_sf Dir.glob("#{cwd}/bin/*"), "#{Dir.home}/bin"
+end
+
+desc "Enable all scripts"
+task :enable_all_scripts => [:install_git_utils] do
 end
