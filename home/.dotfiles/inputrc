@@ -31,6 +31,9 @@ $endif
 # Forget about capitalization
 set completion-ignore-case on
 
+# No more beeps
+set bell-style none
+
 # No need to press tab twice to see the commands
 # set show-all-if-ambiguous on
 
