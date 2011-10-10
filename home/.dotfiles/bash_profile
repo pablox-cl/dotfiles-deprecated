@@ -2,4 +2,9 @@
 # ~/.bash_profile
 #
 
+# Start xbindkeys, so shift + vertical scroll whell works like
+# horizontal scroll.
+# See ~/.dotfiles/xbindkeysrc.scm for more details
+hash xbindkeys 2>&- && { xbindkeys; }
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc

@@ -115,6 +115,12 @@ you need to install some font or some other program that conky uses.
 For the same reason I'm **not** installing any conkyrc with the install
 script.
 
+## Miscellaneous Notes ##
+
+I added a xbindkeys file to emulate an horizontal scroll with shift +
+vertical scroll, so `xbindkeys` and `xautomation` are needed to make that
+work.
+
 ## Issues? ##
 
 If you have any problem, think that something can work better or want to
