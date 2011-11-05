@@ -28,6 +28,7 @@ alias q='exit'
 alias rb='ruby'
 alias md='mkdir -p'
 alias rdir='rmdir'
+alias e='gvim'
 
 # push and pop directories on directory stack
 alias pu='pushd'
