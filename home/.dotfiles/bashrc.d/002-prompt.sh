@@ -4,7 +4,7 @@
 # Show only the three last directories
 PROMPT_DIRTRIM=3
 
-PS1="${BWhite}[${BPurple}${History}${BWhite}:${BBlue}\w${BWhite}]${BGreen} ${User}${Color_Off} "
+PS1="${BWhite}[${BWhite}${BBlue}\w${BWhite}]${BGreen} ${User}${Color_Off} "
 
 # Add rvm to your prompt
 #PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
