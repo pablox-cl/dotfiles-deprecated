@@ -74,6 +74,9 @@ dwsync.xml
 # Redcar
 .redcar/*
 
+# Dropbox
+.dropbox
+
 # Compilated files
 *.pyc
 *.rbc
