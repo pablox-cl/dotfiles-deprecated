@@ -2,6 +2,15 @@
 
 loadplugins '\.(js|penta)$'
 group user
+
+" Hide everything but the main toolbar and tabs
 set guioptions=bCrsT
+
+" Bypass pentadactyl on gmail
+autocmd LocationChange mail.google.com :normal! <C-z>
+
+" Fix "yank" issue
+" http://code.google.com/p/dactyl/issues/detail?id=719#c10
+:js editor.defaultRegister="+"
 
 " vim: set ft=pentadactyl:
