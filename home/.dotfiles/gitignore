@@ -4,27 +4,64 @@
 *.orig
 *.log
 *.rej
-*.swo
-*.swp
 *.vi
 *~
 *.sass-cache
-._*
 .#*
 TAGS
 tags
+tmp/**
+*.bak
 
-# OS or Editor folders
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Emacs - Org-mode
+.org-id-locations
+*_archive
+
+# KDE
+.directory
+
+# SublimeText project files
+/*.sublime-project
+*.sublime-workspace
+
+# OSX
 .DS_Store
+
+# Thumbnails
+._*
 Thumbs.db
-.cache
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Editor folders (eclipse, netbeans)
 .project
-.settings
+.metadata
+.cache
 .tmproj
 *.esproj
+.cproject
+.buildpath
+*.launch
+.externalToolBuilders/
+.classpath
+.loadpath
 nbproject
-*.sublime-project
-*.sublime-workspace
 
 # Dreamweaver added files
 _notes
