@@ -7,7 +7,7 @@ group user
 set guioptions=bCrsT
 
 " Bypass pentadactyl on gmail
-autocmd LocationChange mail.google.com :normal! <C-z>
+autocmd LocationChange mail.google.com,docs.google.com :normal! <C-z>
 
 " Fix "yank" issue
 " http://code.google.com/p/dactyl/issues/detail?id=719#c10
