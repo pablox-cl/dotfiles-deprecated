@@ -9,7 +9,7 @@ PROJECT_DIR="${HOME}/code"
 export PATH EDITOR GREP_COLORS LESS PROJECT_DIR
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTSIZE=10000
 HISTFILESIZE=20000
 
 # Don't put duplicate lines in the history. See bash(1) for more options
