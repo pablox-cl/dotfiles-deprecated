@@ -5,22 +5,24 @@ directory "bin"
 tmp_dir = File.expand_path("tmp")
 cwd = File.expand_path("../", __FILE__)
 
+def fancy_output(message)
+  puts "*" * 40
+  puts "*" + message.center(38) + "*"
+  puts "*" * 40
+end
+
 task :default => [:bash_it_theme_support, :clean]
 
 desc "Bash it theme support"
 task :bash_it_theme_support do
-  puts "*" * 40
-  puts "*#{"Cloning Bash-it themes".center(38)}*"
-  puts "*" * 40
+  fancy_output "Cloning Bash-it themes"
   sh "git clone git://github.com/revans/bash-it.git #{tmp_dir}/bash-it"
   FileUtils.mv "#{tmp_dir}/bash-it/themes", "#{cwd}/lib/bash-it"
 end
 
 desc "Install git-utils"
 task :install_git_utils => "bin" do
-  puts "*" * 40
-  puts "*#{"Updating git-utils to last version".center(38)}*"
-  puts "*" * 40
+  fancy_output "Updating git-utils to last version"
   Dir.chdir "../../"
   sh "git submodule init"
   sh "git submodule update home/.dotfiles/lib/git-utils"
