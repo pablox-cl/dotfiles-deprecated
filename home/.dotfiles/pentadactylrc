@@ -6,11 +6,17 @@ group user
 " Hide everything but the main toolbar and tabs
 set guioptions=bCrsT
 
-" Bypass pentadactyl on gmail
+" Bypass pentadactyl on google websites
 autocmd LocationChange google.com :normal! <C-z>
 
 " Fix "yank" issue
 " http://code.google.com/p/dactyl/issues/detail?id=719#c10
 :js editor.defaultRegister="+"
+
+" Change map leader
+set mapleader=","
+
+" Set duckduckgo as the default search engine
+set defsearch=duckduckgo
 
 " vim: set ft=pentadactyl:
