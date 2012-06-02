@@ -10,8 +10,8 @@ DIRS=( "private" "completions" "aliases" )
 
 # Load a local bashrc
 function bashrc_local() {
-  if [ -f "${BASHRC}.$1" ]; then
-    source "${BASHRC}.$1"
+  if [ -f "bashrc.$1" ]; then
+    source "bashrc.$1"
   fi
 }
 
