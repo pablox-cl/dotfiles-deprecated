@@ -1,14 +1,15 @@
 require 'rake/clean'
+
 CLEAN.include('tmp')
 directory "bin"
 
 tmp_dir = File.expand_path("tmp")
 cwd = File.expand_path("../", __FILE__)
 
-def fancy_output(message)
-  puts "*" * 40
-  puts "*" + message.center(38) + "*"
-  puts "*" * 40
+def fancy_output(message, n=40)
+  puts "*" * n
+  puts "*" + message.center(n - 2) + "*"
+  puts "*" * n
 end
 
 task :default => [:bash_it_theme_support, :clean]
@@ -32,9 +33,7 @@ end
 
 desc "Enable scripts"
 task :enable_scripts do
-  puts "*" * 55
-  puts "*#{"Linking scripts to your #{Dir.home}/bin directory".center(53)}*"
-  puts "*" * 55
+  fancy_output "Linking scripts to your #{Dir.home}/bin directory", 55
   FileUtils.ln_sf Dir.glob("#{cwd}/bin/*"), "#{Dir.home}/bin"
 end
 
