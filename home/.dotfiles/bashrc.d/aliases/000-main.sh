@@ -29,6 +29,7 @@ alias rb='ruby'
 alias md='mkdir -p'
 alias rdir='rmdir'
 alias e='gvim'
+alias t='todo.sh'
 
 # push and pop directories on directory stack
 alias pu='pushd'
@@ -107,6 +108,7 @@ cat << EOF
     rdir  = rmdir
     pu    = pushd
     po    = popd
+    t     = todo.sh                 # Gina Trapani's todo.txt: http://todotxt.com/
 
     # Modified commands
     diff  = colordiff               # only works if colordiff is installed

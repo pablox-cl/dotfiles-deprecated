@@ -20,6 +20,7 @@ HISTCONTROL=ignoreboth:erasedups
 complete -cf sudo
 complete -cf _
 complete -cf man
+complete -F  _todo t
 
 # Append to the history file, don't overwrite it
 shopt -s histappend
