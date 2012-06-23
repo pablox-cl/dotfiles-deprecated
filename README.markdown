@@ -13,18 +13,21 @@ Just a place to keep my dotfiles synced.
 * hgrc
 * conkyrc
 * detoxrc
+* pentadactylrc
 
 ## Aliases ##
 
 * general bash aliases
 * git
 * rails
+* todo-txt
 
 ## Completion scripts ##
 
 * git
 * rake
 * projects (see below)
+* todo-txt
 
 ## Install ##
 
@@ -33,7 +36,7 @@ thing). The install script renames your original files adding an `.old` suffix
 (`.bashrc -> .bashrc.old`) before copying the new shiny ones (`~/.dotfiles/bashrc -> ~/.bashrc`).
 I made that decision because [Homesick](https://github.com/technicalpickles/homesick)
 just try to replace if the files has the same name (AFAIK it doesn't make a backup) and
-because I rather work with files that don't start with a dot (quite
+also because I rather work with files that don't start with a dot (quite
 ironic isn't it?).
 
 ### Clone the repo ###
